@@ -1,8 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Header from './modules/header'
 import localFont from 'next/font/local'
+import Header from './modules/header'
 
 const grotesk = localFont({
   src: [
@@ -38,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={grotesk.className}>
-      <body className="overflow-hidden bg-white bg-none">
+      <body className="overflow-x-hidden bg-white bg-none">
         <Header />
         {children}
       </body>
