@@ -15,7 +15,7 @@ export default function Home() {
         description='Hadirlah Inovasi Baru Sebuah ICE CREAM  Labu Dari UMKM Sekitar'
         link={
           {
-            text: 'Explore Now',
+            text: 'Aku Juga Mw',
             url: '#'
           }
         }
@@ -23,6 +23,22 @@ export default function Home() {
           {
             url: 'https://images.unsplash.com/photo-1595871277397-08901ed2d7f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
             alt: 'Ice Cream Banner'
+          }
+        }
+      />
+      <HeroBanner
+        title='Pupuk Alami'
+        description='Menggunakan racikan alami demi kesehatan yang maksimal'
+        link={
+          {
+            text: 'Aku Juga Mw',
+            url: '#'
+          }
+        }
+        background={
+          {
+            url: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            alt: 'Pupuk Banner'
           }
         }
       />
