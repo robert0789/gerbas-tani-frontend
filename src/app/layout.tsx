@@ -1,8 +1,30 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Header from './modules/header'
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ['latin'] })
+const grotesk = localFont({
+  src: [
+    {
+      path: "./font/cabinet-grotesk/CabinetGrotesk-Regular.woff2",
+      style: 'normal',
+      weight: '400'
+    },
+    {
+      path: "./font/cabinet-grotesk/CabinetGrotesk-Bold.woff2",
+      style: 'normal',
+      weight: '700'
+    },
+    {
+      path: "./font/cabinet-grotesk/CabinetGrotesk-Black.woff2",
+      style: 'normal',
+      weight: '900'
+    },
+  ],
+  variable: '--font-grotesk'
+})
+ 
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +37,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={grotesk.className}>
+      <body className="overflow-hidden bg-white bg-none">
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
