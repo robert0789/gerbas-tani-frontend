@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
+import Image from "next/image";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -16,6 +17,33 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const useIsUserNotAtTop = (): boolean =>  {
+    const [isUserNotAtTop, setIsUserNotAtTop] = useState(false);
+  
+    useEffect(() => {
+      // Function to check if the user is not at the top
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setIsUserNotAtTop(true);
+        } else {
+          setIsUserNotAtTop(false);
+        }
+      };
+  
+      // Attach the event listener to the scroll event
+      window.addEventListener('scroll', handleScroll);
+  
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+  
+    return isUserNotAtTop;
+  }
+
+  const isUserNotAtTop = useIsUserNotAtTop()
 
   return (
     <header className="sticky top-0 left-0 bg-white w-full z-50">
@@ -46,13 +74,23 @@ const Header = () => {
             </button>
           </div>
         </div>
-        <a href="#" className="-m-1.5 p-1.5">
+        <a href="/" className="-m-1.5 p-1.5">
           <span className="sr-only">Your Company</span>
-          <img
-            className="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
-          />
+          <div className={clsx("relative h-[100px] w-[100px] -m-4 transition-all", {
+            "w-[75px] h-[75px]": isUserNotAtTop,
+          })}>
+            <Image
+              src={
+                "https://drive.google.com/uc?id=11lA4uVtK7fSftWPowzjZW49xAG1hxB8W"
+              }
+              alt="Gerbas"
+              layout="fill"
+              objectFit="contain"
+              objectPosition={"center"}
+              className="w-full"
+              priority
+            />
+          </div>
         </a>
         <div className="flex flex-1 justify-end">
           <button onClick={toggleMenu} className="text-gray-900 font-bold">
@@ -63,7 +101,7 @@ const Header = () => {
       <div
         className={clsx(
           "absolute top-0 right-0",
-          "bg-black/5 text-white w-full h-screen z-10",
+          "bg-black/25 text-white w-full h-screen z-10",
           "transition-transform",
           { "-translate-x-0": menuOpen, "translate-x-full ": !menuOpen }
         )}

@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import Button from "../button";
+import Image from "next/image";
 
 const navigation = {
   solutions: [
@@ -100,9 +101,46 @@ const Footer: React.FC = () => {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="flex flex-col gap-y-4">
-            <div className="flex flex-row gap-x-4">
-              <div className="bg-gray-200 h-[100px] w-[150px]"></div>
-              <div className="bg-gray-200 h-[100px] w-[100px]"></div>
+            <div className="flex flex-row gap-x-2">
+              <div className="relative h-[100px] w-full -m-4">
+                <Image
+                  src={
+                    "https://drive.google.com/uc?id=11lA4uVtK7fSftWPowzjZW49xAG1hxB8W"
+                  }
+                  alt="Gerbas"
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition={"center"}
+                  className="w-full"
+                  priority
+                />
+              </div>
+              <div className="relative h-[100px] w-full -m-4">
+                <Image
+                  src={
+                    "https://drive.google.com/uc?id=10Zkatwr9TWBXvJb_BelcHFWhWFs-FG3R"
+                  }
+                  alt="Gerbas"
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition={"center"}
+                  className="w-full"
+                  priority
+                />
+              </div>
+              <div className="relative h-[100px] w-full -m-4">
+                <Image
+                  src={
+                    "https://drive.google.com/uc?id=1ARaSkC6OvGntvSlMbXF-YKPI4frz9bsm"
+                  }
+                  alt="Gerbas"
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition={"center"}
+                  className="w-full"
+                  priority
+                />
+              </div>
             </div>
             <div>
               Gerbas tani adalah sebuah toko yang menyediakan sayuran semuanya
@@ -179,9 +217,7 @@ const Footer: React.FC = () => {
                   placeholder="Enter your email"
                 />
                 <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
-                  <Button variant="primary">
-                    Subscribe
-                  </Button>
+                  <Button variant="primary">Subscribe</Button>
                 </div>
               </form>
             </div>
