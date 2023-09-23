@@ -32,7 +32,6 @@ const About: React.FC = () => {
                 </div>
                 <div className="py-4">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quidem. Quaerat, voluptas?
                 </div>
               </div>
               <div className="bg-gray-200 rounded-md w-full flex flex-row">
@@ -41,7 +40,6 @@ const About: React.FC = () => {
                 </div>
                 <div className="py-4">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quidem. Quaerat, voluptas?
                 </div>
               </div>
             </div>
@@ -52,7 +50,6 @@ const About: React.FC = () => {
                 </div>
                 <div className="py-4">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quidem. Quaerat, voluptas?
                 </div>
               </div>
               <div className="bg-gray-200 rounded-md w-full flex flex-row">
@@ -61,7 +58,6 @@ const About: React.FC = () => {
                 </div>
                 <div className="py-4">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quidem. Quaerat, voluptas?
                 </div>
               </div>
             </div>
