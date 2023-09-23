@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
@@ -12,7 +12,49 @@ const navigation = [
 ];
 
 const Hero: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [countdown, setCountdown] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    // Set the target date to August 1, 2024, at midnight (00:00:00)
+    const targetDate = new Date("2024-08-01T00:00:00").getTime();
+
+    const updateCountdown = () => {
+      const currentDate = new Date().getTime();
+      const timeLeft = targetDate - currentDate;
+
+      if (timeLeft <= 0) {
+        // Countdown has ended
+        setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        clearInterval(interval);
+      } else {
+        // Calculate days, hours, minutes, and seconds left
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        setCountdown({ days, hours, minutes, seconds });
+      }
+    };
+
+    // Update the countdown every second
+    const interval = setInterval(updateCountdown, 1000);
+
+    // Clean up the interval when the component unmounts
+    return () => {
+      clearInterval(interval);
+    };
+
+    // Initial call to set the countdown
+    updateCountdown();
+  }, []);
 
   return (
     <div className="w-full">
@@ -31,13 +73,16 @@ const Hero: React.FC = () => {
           />
         </div>
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 -z-10"></div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-80 z-10">
+        <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-80 z-10">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-7xl">
-              82:34:20:14
+                {countdown.days} <span className="text-[2rem] mr-2">hari</span>
+                {countdown.hours} <span className="text-[2rem] mr-2">jam</span> 
+                {countdown.minutes} <span className="text-[2rem] mr-2">menit</span>
+                {countdown.seconds} <span className="text-[2rem] mr-2">detik</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-white">
-              Gerbas Tani akan dimulai pada bulan Agustus
+              lagi hingga Gerbas Sari tiba di Lumajang
             </p>
           </div>
         </div>
