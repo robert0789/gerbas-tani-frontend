@@ -9,8 +9,9 @@ import Link from "next/link";
 const navigation = [
   { name: "Beranda", href: "/" },
   { name: "Gerbas Tani", href: "/gerbas-tani" },
-  { name: "Agro Asri Farm", href: "#" },
+  { name: "Agro Asri Farm", href: "/agro-asri" },
   { name: "Produk", href: "/produk" },
+  { name: "Pupuk", href: '/pupuk'},
   { name: "Kontak", href: "#" },
 ];
 
@@ -49,7 +50,7 @@ const Header = () => {
   const isUserNotAtTop = useIsUserNotAtTop();
 
   return (
-    <header className="fixed top-0 left-0 bg-white w-full z-50">
+    <header className="fixed top-0 left-0 bg-white/75 backdrop-blur-md w-full z-50">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Gerbas Tani"

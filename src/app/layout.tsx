@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 import Header from './modules/header'
 import Footer from './modules/footer'
+import clsx from 'clsx'
 
 const grotesk = localFont({
   src: [
@@ -38,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={grotesk.className}>
+    <html lang="en" className={clsx(grotesk.className, "bg-white")}>
       <body className="max-w-screen bg-white bg-none">
         <Header />
         {children}
