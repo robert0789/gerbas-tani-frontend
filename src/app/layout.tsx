@@ -39,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={grotesk.className}>
-      <body className="overflow-x-hidden bg-white bg-none">
+      <body className="max-w-screen bg-white bg-none">
         <Header />
         {children}
         <Footer />

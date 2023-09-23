@@ -158,8 +158,8 @@ const Footer: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-8 xl:col-span-2">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 xl:col-span-2">
+            <div className="grid grid-cols-2 md:gap-8 mt-10 sm:mt-0">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-white">
                   Solutions
@@ -177,7 +177,7 @@ const Footer: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              <div className="mt-10 md:mt-0">
+              <div>
                 <h3 className="text-sm font-semibold leading-6 text-white">
                   Legal
                 </h3>

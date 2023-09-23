@@ -27,7 +27,7 @@ const HeroBanner: React.FC<Props> = ({
 
   return (
     <div className="bg-gray-900 w-full">
-      <div className="relative isolate overflow-hidden pt-14">
+      <div className="relative isolate overflow-hidden sm:pt-14">
         <div className="relative h-96 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-full bg-white order-1 lg:order-2 -z-10">
           <Image
             src={background.url}
@@ -44,7 +44,7 @@ const HeroBanner: React.FC<Props> = ({
           aria-hidden="true"
         >
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-44 z-10">
+        <div className="absolute sm:static top-0 left-0 w-full h-full mx-auto max-w-2xl py-32 sm:py-44 z-10">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               {title}

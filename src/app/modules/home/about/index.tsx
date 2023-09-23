@@ -7,8 +7,8 @@ import Image from "next/image";
 const About: React.FC = () => {
   return (
     <div className="w-full text-gray-900">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-x-16 py-24">
-        <div className="w-1/2 flex flex-col gap-y-4">
+      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row gap-x-16 px-4 sm:px-0 py-24 gap-12">
+        <div className="w-full flex flex-col gap-y-4">
           <div className="relative w-full bg-gray-200 aspect-[3/2]">
             <Image
               src={
@@ -51,7 +51,7 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 flex flex-col gap-y-4">
+        <div className="w-full flex flex-col gap-y-4">
           <span>Dari Petani, Demi Petani, Untuk Petani</span>
           <h2 className="text-6xl font-black">Mahakarya yang Membumi</h2>
           <p>
