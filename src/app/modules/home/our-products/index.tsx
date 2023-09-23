@@ -3,7 +3,7 @@ import Image from "next/image";
 const OurProducts: React.FC = () => {
   return (
     <div className="py-24">
-      <div className="grid grid-col-1 sm:grid-cols-3 gap-x-8">
+      <div className="grid grid-col-1 sm:grid-cols-3 gap-8">
         <div className="flex flex-col gap-y-4 p-8 bg-gray-200 text-gray-900 justify-center items-center">
           <div className="relative max-w-[200px] w-full aspect-[2/3]">
             <Image
