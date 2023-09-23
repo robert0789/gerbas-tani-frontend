@@ -22,13 +22,14 @@ const HeroBanner: React.FC<Props> = ({
   description,
   link,
   background,
+  
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="bg-gray-900 w-full">
       <div className="relative isolate overflow-hidden sm:pt-14">
-        <div className="relative h-96 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-full bg-white order-1 lg:order-2 -z-10">
+        <div className="relative h-96 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-full bg-white order-1 lg:order-2 -z-10 px-6">
           <Image
             src={background.url}
             alt={background.alt}
@@ -43,7 +44,7 @@ const HeroBanner: React.FC<Props> = ({
           className="absolute inset-x-0 w-full h-full top-0 -z-10 transform-gpu bg-gray-900 opacity-50 blur-3xl"
           aria-hidden="true"
         ></div>
-        <div className="absolute sm:static top-0 left-0 w-full h-full mx-auto max-w-2xl py-32 sm:py-44 z-10">
+        <div className="absolute sm:static top-0 left-0 w-full h-full mx-auto max-w-2xl py-32 sm:py-44 z-10 px-6">
           <div className="text-center">
             {title && (
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
