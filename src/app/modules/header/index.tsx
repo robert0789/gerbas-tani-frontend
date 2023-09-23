@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white relative">
+    <header className="sticky top-0 left-0 bg-white w-full z-50">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Gerbas Tani"
@@ -59,36 +59,36 @@ const Header = () => {
             Menu
           </button>
         </div>
-        <div
-          className={clsx(
-            "absolute top-0 right-0",
-            "bg-black/5 text-white w-full h-screen z-10",
-            "transition-transform",
-            { "-translate-x-0": menuOpen, "translate-x-full ": !menuOpen }
-          )}
-          onClick={toggleMenu}
-        >
-          <div className="relative ml-auto bg-black max-w-3xl w-full h-full p-8">
-            <ul className="flex flex-col gap-y-4">
-              <li className="text-white font-bold text-5xl">Beranda</li>
-              <li className="text-white font-bold text-5xl">Gerbas Tani</li>
-              <li className="text-white font-bold text-5xl">Agro Asri Farm</li>
-              <li className="text-white font-bold text-5xl">Produk</li>
-              <li className="text-white font-bold text-5xl">Kontak</li>
-            </ul>
-            <div>
-              <button
-                type="button"
-                className="absolute top-4 right-4"
-                onClick={toggleMenu}
-              >
-                <span className="sr-only">Close menu</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
-            </div>
+      </nav>
+      <div
+        className={clsx(
+          "absolute top-0 right-0",
+          "bg-black/5 text-white w-full h-screen z-10",
+          "transition-transform",
+          { "-translate-x-0": menuOpen, "translate-x-full ": !menuOpen }
+        )}
+        onClick={toggleMenu}
+      >
+        <div className="relative ml-auto bg-black max-w-3xl w-full h-full p-8 z-10">
+          <ul className="flex flex-col gap-y-4">
+            <li className="text-white font-bold text-5xl">Beranda</li>
+            <li className="text-white font-bold text-5xl">Gerbas Tani</li>
+            <li className="text-white font-bold text-5xl">Agro Asri Farm</li>
+            <li className="text-white font-bold text-5xl">Produk</li>
+            <li className="text-white font-bold text-5xl">Kontak</li>
+          </ul>
+          <div>
+            <button
+              type="button"
+              className="absolute top-4 right-4"
+              onClick={toggleMenu}
+            >
+              <span className="sr-only">Close menu</span>
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+            </button>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
 };
