@@ -9,7 +9,7 @@ import Link from "next/link";
 const navigation = [
   { name: "Beranda", href: "/" },
   { name: "Gerbas Tani", href: "/gerbas-tani" },
-  { name: "Agro Asri Farm", href: "#" },
+  { name: "Agro Asri Farm", href: "/agro-asri" },
   { name: "Produk", href: "/produk" },
   { name: "Kontak", href: "#" },
 ];
