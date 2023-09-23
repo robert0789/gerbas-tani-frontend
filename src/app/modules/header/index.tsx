@@ -4,11 +4,14 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "Beranda", href: "#" },
+  { name: "Gerbas Tani", href: "#" },
+  { name: "Agro Asri Farm", href: "#" },
+  { name: "Produk", href: "#" },
+  { name: "Kontak", href: "#" },
 ];
 
 const Header = () => {
@@ -18,9 +21,9 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const useIsUserNotAtTop = (): boolean =>  {
+  const useIsUserNotAtTop = (): boolean => {
     const [isUserNotAtTop, setIsUserNotAtTop] = useState(false);
-  
+
     useEffect(() => {
       // Function to check if the user is not at the top
       const handleScroll = () => {
@@ -30,20 +33,20 @@ const Header = () => {
           setIsUserNotAtTop(false);
         }
       };
-  
+
       // Attach the event listener to the scroll event
-      window.addEventListener('scroll', handleScroll);
-  
+      window.addEventListener("scroll", handleScroll);
+
       // Clean up the event listener when the component unmounts
       return () => {
-        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener("scroll", handleScroll);
       };
     }, []);
-  
-    return isUserNotAtTop;
-  }
 
-  const isUserNotAtTop = useIsUserNotAtTop()
+    return isUserNotAtTop;
+  };
+
+  const isUserNotAtTop = useIsUserNotAtTop();
 
   return (
     <header className="fixed top-0 left-0 bg-white w-full z-50">
@@ -51,34 +54,16 @@ const Header = () => {
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Gerbas Tani"
       >
-        <div className="flex flex-1">
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-              onClick={() => setMenuOpen(true)}
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
         <a href="/" className="-m-1.5 p-1.5">
           <span className="sr-only">Your Company</span>
-          <div className={clsx("relative h-[100px] w-[100px] -m-4 transition-all", {
-            "w-[75px] h-[75px]": isUserNotAtTop,
-          })}>
+          <div
+            className={clsx(
+              "relative h-[100px] w-[100px] -m-4 transition-all",
+              {
+                "w-[75px] h-[75px]": isUserNotAtTop,
+              }
+            )}
+          >
             <Image
               src={
                 "https://drive.google.com/uc?id=11lA4uVtK7fSftWPowzjZW49xAG1hxB8W"
@@ -109,11 +94,11 @@ const Header = () => {
       >
         <div className="relative ml-auto bg-yellow-400 max-w-3xl w-full h-full p-8 z-10">
           <ul className="flex flex-col gap-y-4">
-            <li className="text-green-700 font-bold text-5xl">Beranda</li>
-            <li className="text-green-700 font-bold text-5xl">Gerbas Tani</li>
-            <li className="text-green-700 font-bold text-5xl">Agro Asri Farm</li>
-            <li className="text-green-700 font-bold text-5xl">Produk</li>
-            <li className="text-green-700 font-bold text-5xl">Kontak</li>
+            {navigation.map((item) => (
+              <li key={item.href} className="text-green-700 font-bold text-5xl">
+                <Link href={item.href}>{item.name}</Link>
+              </li>
+            ))}
           </ul>
           <div>
             <button
@@ -122,7 +107,10 @@ const Header = () => {
               onClick={toggleMenu}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <XMarkIcon
+                className="h-10 w-10 text-green-700"
+                aria-hidden="true"
+              />
             </button>
           </div>
         </div>
