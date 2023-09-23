@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import clsx from "clsx";
 
 type Props = {
   title?: string;
@@ -15,19 +16,19 @@ type Props = {
     url: string;
     alt: string;
   };
-};
+} & React.HTMLAttributes<HTMLDivElement>
 
 const HeroBanner: React.FC<Props> = ({
   title,
   description,
   link,
   background,
+  className
 }) => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-gray-900 w-full">
-      <div className="relative isolate overflow-hidden sm:pt-14">
+    <div className={clsx("bg-white w-full")}>
+      <div className={clsx("relative isolate overflow-hidden sm:pt-14", className)}>
         <div className="relative h-96 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-full bg-white order-1 lg:order-2 -z-10">
           <Image
             src={background.url}

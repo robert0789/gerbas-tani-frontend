@@ -14,9 +14,9 @@ type Props = {
 const CTA: React.FC<Props> = ({ title, description, button, className }) => {
   return (
     <div className={clsx("w-full bg-green-700 py-24", className)}>
-      <div className="flex flex-col sm:flex-row gap-8 text-white px-4 sm:px-0 max-w-7xl mx-auto">
+      <div className="flex flex-col sm:flex-row gap-8 text-white px-4 sm:px-0 max-w-7xl mx-auto items-center">
         <div className="w-full">
-          <h2 className="text-4xl font-bold">{title}</h2>
+          <h2 className="text-4xl font-bold mb-4">{title}</h2>
           <p className="text-xl">{description}</p>
         </div>
         <div className="w-full flex justify-center">
