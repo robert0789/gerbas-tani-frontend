@@ -49,6 +49,7 @@ const pupuk = [
 
 const PupukTemplate: React.FC = () => {
   return (
+
     <div className="bg-white text-gray-900">
       <HeroBanner
         title="Penanaman dengan Kebiasaan Baru"
@@ -56,14 +57,14 @@ const PupukTemplate: React.FC = () => {
           url: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
           alt: "Pupuk Banner",
         }}
-        className="rounded-b-3xl"
+        className=" rounded-b-3xl sm:h-56 text-6xl sm:text-lg"
       />
       <div className="max-w-7xl mx-auto py-24">
         <h2 className="text-3xl font-bold">Bahaya Pupuk Kimia</h2>
         <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-3 sm:gap-x-6">
           {bahayaKimia.map((item, index) => (
             <div key={index}>
-              <div className="relative">
+              <div className="relative px-4">
                 <div className="relative h-72 w-full overflow-hidden rounded-lg">
                   <Image
                     src={item.image.url}
@@ -130,9 +131,9 @@ const PupukTemplate: React.FC = () => {
         </div>
       </div>
       <CTA
-        title="Tertarik Pupuk Organik?"
+        title="Sudah Tahu Manfaat Pupuk diatas?"
         description="Yuk ke Gerbas Tani dan Taman Agro Asri Farm dan beli produk yang sudah ada!"
-        button={{ link: "", text: "" }}
+        button={{ link: "https://api.whatsapp.com/send?phone=6285210543979&text=Halo,%20ada%20yang%20ingin%20saya%20tanyakan", text: "Mulai" }}
       />
     </div>
   );

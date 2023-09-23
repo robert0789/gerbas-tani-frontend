@@ -23,7 +23,7 @@ const AgroAsriTemplate: React.FC = () => {
             aria-hidden="true"
           ></div>
           <div className="absolute sm:static top-0 left-0 w-full h-full mx-auto max-w-7xl py-32 sm:py-44 z-10">
-            <div className="text-left">
+            <div className="text-left sm:px-6 px-6">
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-7xl flex flex-col gap-y-4">
                 <span>Agro Asri </span>
                 <span className="py-2 px-8 bg-yellow-400 rounded-lg w-fit text-green-700">
@@ -48,7 +48,7 @@ const AgroAsriTemplate: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto flex flex-col gap-y-16 py-24">
+      <div className="max-w-7xl mx-auto flex flex-col gap-y-16 py-24 px-6">
         <h2 className="text-4xl font-bold">Kenapa Harus Agro Asri Farm?</h2>
         <div className="flex flex-col gap-y-12">
           <div className="flex flex-row gap-x-12">
@@ -141,7 +141,7 @@ const AgroAsriTemplate: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2">
           <div>
             <h2 className="text-4xl font-bold">Cara Scan</h2>
-            <p>Lorem Ipsum dolor sit amet</p>
+            <p className="py-6">Lorem Ipsum dolor sit amet</p>
           </div>
           <div>
             <div className="relative w-full aspect-[2/3] h-auto">
@@ -163,7 +163,7 @@ const AgroAsriTemplate: React.FC = () => {
       <CTA
         title="Yuk ke Agro Asri Farm"
         description="Cari tahu pengolahan khusus untuk sayuran semi organik demi mengurangi bahan kimia sekarang!"
-        button={{ link: "", text: "" }}
+        button={{ link: "", text: "Cek Lokasi" }}
       />
     </div>
   );

@@ -12,7 +12,7 @@ const GerbasTaniTemplate: React.FC = () => {
           url: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         }}
       />
-      <div className="max-w-7xl mx-auto py-24">
+      <div className="max-w-7xl mx-auto py-24 px-6">
         <h2 className="text-5xl font-bold text-center">Pilar Gerbas Tani</h2>
         <div className="relative w-full h-auto aspect-[3/2] max-w-3xl mx-auto my-8">
           <Image

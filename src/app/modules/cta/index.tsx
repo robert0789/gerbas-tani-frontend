@@ -20,10 +20,12 @@ const CTA: React.FC<Props> = ({ title, description, button, className }) => {
           <p className="text-xl">{description}</p>
         </div>
         <div className="w-full flex justify-center">
-          <Button variant="secondary" className="!py-8 !px-16 !text-4xl">
+          <a href={button.link}>
+          <Button variant="secondary" className="!py-8 !px-16 !text-a4xl">
             <MapPinIcon className="h-10 w-10" />&nbsp;
-            Cek Lokasi
+            {button.text}
           </Button>
+          </a>
         </div>
       </div>
     </div>

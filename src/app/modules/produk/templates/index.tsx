@@ -76,8 +76,8 @@ const ProdukTemplate: React.FC = () => {
                     {item.status}
                   </div>
                 </div>
-                <div className="w-2/12">
-                  <a href="wa.me/a" className="px-6 py-4 shadow-md rounded-md">
+                <div className="md:w-2/12">
+                  <a href="https://api.whatsapp.com/send?phone=6285210543979&text=Halo,%20ada%20yang%20ingin%20saya%20tanyakan" className="px-6 py-4 shadow-md rounded-md text-xs">
                     Pesan Sekarang
                   </a>
                 </div>
