@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import Button from "../button";
 
 const navigation = {
   solutions: [
@@ -178,12 +179,9 @@ const Footer: React.FC = () => {
                   placeholder="Enter your email"
                 />
                 <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
-                  <button
-                    type="submit"
-                    className="flex w-full items-center justify-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-                  >
+                  <Button variant="primary">
                     Subscribe
-                  </button>
+                  </Button>
                 </div>
               </form>
             </div>
