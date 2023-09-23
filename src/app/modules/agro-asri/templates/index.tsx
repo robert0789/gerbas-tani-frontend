@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroBanner from "../../hero-banner";
+import CTA from "../../cta";
 
 const AgroAsriTemplate: React.FC = () => {
   return (
@@ -159,6 +160,11 @@ const AgroAsriTemplate: React.FC = () => {
           </div>
         </div>
       </div>
+      <CTA
+        title="Yuk ke Agro Asri Farm"
+        description="Cari tahu pengolahan khusus untuk sayuran semi organik demi mengurangi bahan kimia sekarang!"
+        button={{ link: "", text: "" }}
+      />
     </div>
   );
 };
