@@ -4,7 +4,7 @@ type Props = {} & React.HTMLAttributes<HTMLDivElement>;
 
 const BodyCard: React.FC<Props> = ({ children, className }) => {
   return (
-    <div className={clsx("rounded-lg shadow-lg bg-white p-4", className)}>
+    <div className={clsx("rounded-lg shadow-xl bg-white p-4 text-gray-900", className)}>
       {children}
     </div>
   );

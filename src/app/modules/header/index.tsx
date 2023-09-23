@@ -7,10 +7,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
-  { name: "Beranda", href: "#" },
+  { name: "Beranda", href: "/" },
   { name: "Gerbas Tani", href: "#" },
   { name: "Agro Asri Farm", href: "#" },
-  { name: "Produk", href: "#" },
+  { name: "Produk", href: "/produk" },
   { name: "Kontak", href: "#" },
 ];
 
@@ -94,8 +94,8 @@ const Header = () => {
       >
         <div className="relative ml-auto bg-yellow-400 max-w-3xl w-full h-full p-8 z-10">
           <ul className="flex flex-col gap-y-4">
-            {navigation.map((item) => (
-              <li key={item.href} className="text-green-700 font-bold text-5xl">
+            {navigation.map((item, index) => (
+              <li key={index} className="text-green-700 font-bold text-5xl">
                 <Link href={item.href}>{item.name}</Link>
               </li>
             ))}
