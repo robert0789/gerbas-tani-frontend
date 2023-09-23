@@ -16,7 +16,7 @@ export default function Home() {
         link={
           {
             text: 'Aku Juga Mw',
-            url: '#'
+            url: '/es-krim-labu-madu'
           }
         }
         background={
@@ -32,7 +32,7 @@ export default function Home() {
         link={
           {
             text: 'Aku Juga Mw',
-            url: '#'
+            url: '/pupuk'
           }
         }
         background={
